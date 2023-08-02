@@ -5,6 +5,8 @@ function getComputerChoice() {
     else {return("paper")}
 }
 
+function getPlayerSelection() {window.prompt("Pick your option! (Rock, paper or scissors)")}
+
 function adjustWord(word) {
     let adjustedWord = word.toLowerCase();
     return(adjustedWord)
@@ -27,7 +29,7 @@ function evaluateGame(comp, player) {
 }
 
 let repetitions = parseInt(window.prompt("How many times do you wanna play?"));
-let playerSelection = adjustWord(window.prompt("Pick your option! (Rock, paper or scissors)"));
+let playerSelection = adjustWord(getPlayerSelection());
+let gameResult = evaluateGame(getComputerChoice(), playerSelection);
 
 for (let i = 0; i < repetitions; i++) {alert(getComputerChoice())}
-

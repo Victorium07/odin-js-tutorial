@@ -43,6 +43,18 @@ function evaluateGame(comp, player) {
     }
 }
 
+function sumWins(reps, gameResult) {
+    let playerCount = 0;
+    let computerCount = 0;
+    for (let i = 0;  i < reps; i++) {
+        if (gameResult.slice(0,7) === "You win!") {
+            playerCount += 1;
+        } else { 
+            computerCount += 1;
+        }
+    }
+}
+
 let repetitions = parseInt(window.prompt("How many times do you wanna play?"));
 
 

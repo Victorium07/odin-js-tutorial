@@ -26,18 +26,20 @@ function adjustWord(word) {
 }
 
 function evaluateGame(comp, player) {
+    let compWinStatement = "You lose! " + comp + " beats " + player + "!";
+    let playerWinStatement = "You win! " + player + " beats " + comp + "!";
     if (comp === player) {return("Draw")}
     else if (comp === "rock") {
-        if (player === "scissors") {return("Computer wins!")}
-        else {return("Player wins!")}
+        if (player === "scissors") {return(compWinStatement)}
+        else {return(playerWinStatement)}
     }
     else if (comp === "scissors") {
-        if (player === "paper") {return("Computer wins!")}
-        else {return("Player wins!")}
+        if (player === "paper") {return(compWinStatement)}
+        else {return(playerWinStatement)}
     }
     else if (comp === "paper") {
-        if (player === "rock") {return("Computer wins!")}
-        else {return("Player wins!")}
+        if (player === "rock") {return(compWinStatement)}
+        else {return(playerWinStatement)}
     }
 }
 

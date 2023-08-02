@@ -5,11 +5,23 @@ function getComputerChoice() {
     else {return("paper")}
 }
 
-function getPlayerSelection() {window.prompt("Pick your option! (Rock, paper or scissors)")}
+function getPlayerSelection() {
+    let response = adjustWord(window.prompt("Pick your option! (Rock, paper or scissors)"));
+    while (!responseCheck(response)) {
+        response = window.prompt("Please select one of the three options: Rock, paper or scissors");
+    }
+}
+
+function responseCheck(response) {
+    if (response === "paper" || response === "rock" || response === "scissors") {
+        return(true)
+    }
+    else {return(false)}
+}
 
 function adjustWord(word) {
     let adjustedWord = word.toLowerCase();
-    return(adjustedWord)
+    return(adjustedWord);
 }
 
 function evaluateGame(comp, player) {
@@ -29,8 +41,11 @@ function evaluateGame(comp, player) {
 }
 
 let repetitions = parseInt(window.prompt("How many times do you wanna play?"));
-let computerSelection = getComputerChoice();
-let playerSelection = adjustWord(getPlayerSelection());
-let gameResult = evaluateGame(computerSelection, playerSelection);
 
-for (let i = 0; i < repetitions; i++) {alert(getComputerChoice())}
+
+for (let i = 0; i < repetitions; i++) {
+    let computerSelection = getComputerChoice();
+    let playerSelection = getPlayerSelection();
+    let gameResult = evaluateGame(computerSelection, playerSelection);
+    alert(gameResult);
+}

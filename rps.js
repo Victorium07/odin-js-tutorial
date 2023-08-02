@@ -10,6 +10,7 @@ function getPlayerSelection() {
     while (!responseCheck(response)) {
         response = window.prompt("Please select one of the three options: Rock, paper or scissors");
     }
+    return(response);
 }
 
 function responseCheck(response) {

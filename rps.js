@@ -29,7 +29,8 @@ function evaluateGame(comp, player) {
 }
 
 let repetitions = parseInt(window.prompt("How many times do you wanna play?"));
+let computerSelection = getComputerChoice();
 let playerSelection = adjustWord(getPlayerSelection());
-let gameResult = evaluateGame(getComputerChoice(), playerSelection);
+let gameResult = evaluateGame(computerSelection, playerSelection);
 
 for (let i = 0; i < repetitions; i++) {alert(getComputerChoice())}

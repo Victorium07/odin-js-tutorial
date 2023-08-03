@@ -66,7 +66,7 @@ if (computerCount === playerCount) {
     finalResultMsg = "There are no winners. It's a Draw!!"
 }
 else if (computerCount < playerCount) {
-    finalResultMsg = "Congrats! You win: " + playerCount + " vs " + computerCount;
+    finalResultMsg = "Congrats, You win! " + playerCount + " vs " + computerCount;
 }
 else {
     finalResultMsg = "You lose! " + computerCount + " vs " + playerCount;

@@ -45,13 +45,16 @@ function evaluateGame(comp, player) {
 
 let repetitions = parseInt(window.prompt("How many times do you wanna play?"));
 let finalResultMsg = 0;
+let computerSelection = 0;
+let playerSelection = 0;
+let gameResult = 0;
+let playerCount = 0;
+let computerCount = 0;
 
 for (let i = 0; i < repetitions; i++) {
-    let computerSelection = getComputerChoice();
-    let playerSelection = getPlayerSelection();
-    let gameResult = evaluateGame(computerSelection, playerSelection);
-    let playerCount = 0;
-    let computerCount = 0;
+    computerSelection = getComputerChoice();
+    playerSelection = getPlayerSelection();
+    gameResult = evaluateGame(computerSelection, playerSelection);
     if (gameResult.slice(0,7) === "You win!") {
         playerCount += 1;
     } else { 
@@ -59,7 +62,13 @@ for (let i = 0; i < repetitions; i++) {
     }
 }
 
-if (computerCount === playerCount) {finalResultMsg = "There are no winners. It's a Draw!!"}
-else if (computerCount < playerCount) {finalResultMsg = "Congrats! You win: " + playerCount + " vs " + computerCount;}
-else {finalResultMsg = "You lose! " + computerCount + " vs " + playerCount;}
+if (computerCount === playerCount) {
+    finalResultMsg = "There are no winners. It's a Draw!!"
+}
+else if (computerCount < playerCount) {
+    finalResultMsg = "Congrats! You win: " + playerCount + " vs " + computerCount;
+}
+else {
+    finalResultMsg = "You lose! " + computerCount + " vs " + playerCount;
+}
 alert(finalResultMsg)

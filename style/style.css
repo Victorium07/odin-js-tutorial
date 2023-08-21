@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: url(https://img.freepik.com/premium-photo/searchlight-neon-brick-wall-with-smoke-neon-reflections-wet-asphalt-empty-scene-with-copy-space_117255-1836.jpg);
+}
+
+.header-div, ul {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    gap: 10px;
+    background-color: rgba(136, 133, 133, 0.5);
+}
+
+ul {
+    display: flex;
+}
+
+.header-symbol {
+    height: auto;
+    width: 40px;
+    margin: 10px;
+}
+
+li {
+    list-style-type: none;
+    align-self: center;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px;
+}
+
+.center-text > p {
+    color: white;
+    font-weight: 800;
+    padding: 2px;
+}
+
+.center-text-p {
+    font-size: x-large;
+}
+
+.footer-div {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(136, 133, 133, 0.5);
+}
